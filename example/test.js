@@ -24,7 +24,7 @@ driver.findElement(By.name('email')).sendKeys(usr);
 driver.findElement(By.name('password')).sendKeys(pw, Key.ENTER);
 
 //const {Builder, By, Key, until} = require('selenium-webdriver');를 추가한 후 click 동작함.
-//driver.findElement(By.xpath("//span[contains(@class,'primary-post__more')]")).click();
+driver.findElement(By.xpath("//span[contains(@class,'primary-post__more']")).click();
 
 driver.sleep(20000);
-//driver.quit();
+driver.quit();
