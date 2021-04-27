@@ -1,52 +1,30 @@
-"use strict"; 
-var webdriver = require("selenium-webdriver"),
-SeleniumServer = require("selenium-webdriver/remote").SeleniumServer;
- 
-var cbtHub = "http://hub.crossbrowsertesting.com:80/wd/hub";
+require('chromedriver');
+//const webdriver = require('selenium-webdriver');
+const {Builder, By, Key, until} = require('selenium-webdriver');
+const chrome = require('selenium-webdriver/chrome');
 
-var username ='YOUR_USERNAME'; //replace with your email address 
-var authkey = 'YOUR_AUTHKEY'; //replace with your authkey  
+const driver = new Builder().forBrowser('chrome').build();
+// let driver = new webdriver.Builder()
 
-var caps = {
-    name : 'Basic Test Example',
-    build :  '1.0',
-    version : '70', 
-    platform : 'Windows 10', 
-    screen_resolution : '1366x768',
-    record_video : 'true',
-    record_network : 'false',
-    browserName : 'Chrome',
-    username : username,
-    password : authkey
-};
+//   .forBrowser('chrome')
+//   //.usingServer('http://localhost:4444/wd/hub')
+//   .build();
 
+driver.get('http://business.qa.fastcampus.co.kr');
 
-async function basicExample(){
-    try{
-        var driver = new webdriver.Builder()
-            .usingServer(cbtHub)
-            .withCapabilities(caps)
-            .build(); 
+var usr = "jinhwan.choi@fastcampus.co.kr";
+var pw = "test1234";
 
+//EmailUser
+//driver.findElement(webdriver.By.name('email')).sendKeys(usr);
+driver.findElement(By.name('email')).sendKeys(usr);
 
-        await driver.get('http://crossbrowsertesting.github.io/selenium_example_page.html');
+//Password 
+//driver.findElement(webdriver.By.name('password')).sendKeys(pw, webdriver.Key.ENTER);
+driver.findElement(By.name('password')).sendKeys(pw, Key.ENTER);
 
-        await driver.getTitle().then(function(title) {
-                    console.log("The title is: " + title)
-            });
+//const {Builder, By, Key, until} = require('selenium-webdriver');를 추가한 후 click 동작함.
+driver.findElement(By.xpath("//span[contains(@class,'primary-post__more']")).click();
 
-        driver.quit();
-    }
-
-    catch(err){
-        handleFailure(err, driver)
-    }
-
-}
-
-basicExample();
-
-function handleFailure(err, driver) {
-     console.error('Something went wrong!\n', err.stack, '\n');
-     driver.quit();
-} 
+driver.sleep(20000);
+driver.quit();
