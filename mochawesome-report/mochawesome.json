@@ -1,0 +1,138 @@
+{
+  "stats": {
+    "suites": 1,
+    "tests": 3,
+    "passes": 3,
+    "pending": 0,
+    "failures": 0,
+    "start": "2021-05-06T05:46:09.771Z",
+    "end": "2021-05-06T05:46:24.610Z",
+    "duration": 14839,
+    "testsRegistered": 3,
+    "passPercent": 100,
+    "pendingPercent": 0,
+    "other": 0,
+    "hasOther": false,
+    "skipped": 0,
+    "hasSkipped": false
+  },
+  "results": [
+    {
+      "uuid": "54564809-f9aa-4dbb-9d0a-3fd11ed636c6",
+      "title": "",
+      "fullFile": "cypress/integration/mainContentsCheck.js",
+      "file": "cypress/integration/mainContentsCheck.js",
+      "beforeHooks": [],
+      "afterHooks": [],
+      "tests": [],
+      "suites": [
+        {
+          "uuid": "35f724de-2811-4a48-bf94-022805a71d50",
+          "title": "메인 컨텐츠 체크 테스트",
+          "fullFile": "",
+          "file": "",
+          "beforeHooks": [],
+          "afterHooks": [],
+          "tests": [
+            {
+              "title": "메인 > 영상 디자인",
+              "fullTitle": "메인 컨텐츠 체크 테스트 메인 > 영상 디자인",
+              "timedOut": null,
+              "duration": 5962,
+              "state": "passed",
+              "speed": "slow",
+              "pass": true,
+              "fail": false,
+              "pending": false,
+              "context": null,
+              "code": "// 카테고리 선택\n//페이지 방식으로 구현 필요\n//페이지의 리스트를 불러온 후 있는 경우와 없는 경우를 구분해서 동작 필요..\ncy.get('.category-menu__caption').contains('영상 디자인').click({\n  force: true\n}); //click 에러가 발생하여 강제로 True로 만들었음.\n//Validation\ncy.get('.container').contains('MEDIA DESIGN').should('be.visible');",
+              "err": {},
+              "uuid": "4014857c-d378-4573-9362-c54cbf835aec",
+              "parentUUID": "35f724de-2811-4a48-bf94-022805a71d50",
+              "isHook": false,
+              "skipped": false
+            },
+            {
+              "title": "메인 > 일러스트",
+              "fullTitle": "메인 컨텐츠 체크 테스트 메인 > 일러스트",
+              "timedOut": null,
+              "duration": 2956,
+              "state": "passed",
+              "speed": "slow",
+              "pass": true,
+              "fail": false,
+              "pending": false,
+              "context": null,
+              "code": "cy.get('.category-menu__caption').contains('일러스트').click({\n  force: true\n}); //click 에러가 발생하여 강제로 True로 만들었음.\n//Validation\ncy.get('.container').contains('ILLUST').should('be.visible');",
+              "err": {},
+              "uuid": "5701acea-b5f4-45dc-b8fa-78983e1e85a9",
+              "parentUUID": "35f724de-2811-4a48-bf94-022805a71d50",
+              "isHook": false,
+              "skipped": false
+            },
+            {
+              "title": "메인 > 쿠킹",
+              "fullTitle": "메인 컨텐츠 체크 테스트 메인 > 쿠킹",
+              "timedOut": null,
+              "duration": 2773,
+              "state": "passed",
+              "speed": "slow",
+              "pass": true,
+              "fail": false,
+              "pending": false,
+              "context": null,
+              "code": "cy.get('.category-menu__caption').contains('쿠킹').click({\n  force: true\n}); //click 에러가 발생하여 강제로 True로 만들었음.\n//Validation\ncy.get('.container').contains('COOKING').should('be.visible');",
+              "err": {},
+              "uuid": "1bc7d42f-4317-45b1-bf7b-7fc8490a0451",
+              "parentUUID": "35f724de-2811-4a48-bf94-022805a71d50",
+              "isHook": false,
+              "skipped": false
+            }
+          ],
+          "suites": [],
+          "passes": [
+            "4014857c-d378-4573-9362-c54cbf835aec",
+            "5701acea-b5f4-45dc-b8fa-78983e1e85a9",
+            "1bc7d42f-4317-45b1-bf7b-7fc8490a0451"
+          ],
+          "failures": [],
+          "pending": [],
+          "skipped": [],
+          "duration": 11691,
+          "root": false,
+          "rootEmpty": false,
+          "_timeout": 2000
+        }
+      ],
+      "passes": [],
+      "failures": [],
+      "pending": [],
+      "skipped": [],
+      "duration": 0,
+      "root": true,
+      "rootEmpty": true,
+      "_timeout": 2000
+    }
+  ],
+  "meta": {
+    "mocha": {
+      "version": "7.0.1"
+    },
+    "mochawesome": {
+      "options": {
+        "quiet": false,
+        "reportFilename": "mochawesome",
+        "saveHtml": true,
+        "saveJson": true,
+        "consoleReporter": "spec",
+        "useInlineDiffs": false,
+        "code": true
+      },
+      "version": "6.2.2"
+    },
+    "marge": {
+      "options": null,
+      "version": "5.2.0"
+    }
+  }
+}
