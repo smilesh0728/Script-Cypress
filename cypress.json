@@ -1,5 +1,6 @@
 {
-    "projectId": "dwns1f",
+    "projectId": "dwns1f"
+    /*
     "reporter": "mochawesome",
     "reporterOptions": {
       "reportDir": "cypress/reports/mochawesome-report",
@@ -7,4 +8,5 @@
       "html": true,
       "json": false
     }
+    */
 }
