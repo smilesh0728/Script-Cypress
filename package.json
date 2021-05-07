@@ -13,6 +13,7 @@
     "mochawesome-report-generator": "^5.2.0"
   },
   "scripts": {
-    "test": "./node_modules/.bin/cucumber-js"
+    "test": "./node_modules/.bin/cucumber-js",
+    "cleanup": "rm -fr ./cypress/reports ./cypress/videos ./cypress/screenshots "
   }
 }
