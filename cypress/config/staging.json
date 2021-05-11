@@ -1,0 +1,7 @@
+{
+    "baseUrl": "http://staging.fastcampus.co.kr",
+    "env": {
+      "something": "staging"
+    }
+  }
+  

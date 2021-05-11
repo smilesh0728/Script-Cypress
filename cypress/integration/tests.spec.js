@@ -1,10 +1,14 @@
-describe('로그인 테스트',function(){
+describe('mobile-tests', () => {
+    beforeEach( () => {
+        cy.viewport('iphone-5')
+    })
     it ('비정상 아이디로 로그인', function() {
         // 사이트 접속
         // 환경과 서비스명를 입력받아서 해당 사이트 접속하도록 구현 필요
         cy.visit('https://qa.fastcampus.co.kr')
 
         //로그인 페이지로 이동하는 PATH
+        cy.get('.nav-opener > svg').click()
         cy.contains('로그인').click()
         cy.contains('이메일로 시작하기').click()
 
@@ -32,6 +36,7 @@ describe('로그인 테스트',function(){
         cy.visit('https://qa.fastcampus.co.kr')
 
         //로그인 페이지로 이동하는 PATH
+        cy.get('.nav-opener > svg').click()
         cy.contains('로그인').click()
         cy.contains('이메일로 시작하기').click()
 
@@ -50,8 +55,10 @@ describe('로그인 테스트',function(){
         cy.get('.btn').click()
 
         //홈화면으로 이동하였는지 확인
-        cy.get('.em').contains('최진환').should('be.visible') 
+        //모바일일때만 눌러야 됨
+        cy.get('.nav-opener > svg').click()
+        cy.contains('최진환').should('be.visible') 
     
     })
-
+    
 })

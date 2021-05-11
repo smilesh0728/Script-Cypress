@@ -1,0 +1,7 @@
+{
+    "baseUrl": "http://qa.fastcampus.co.kr",
+    "env": {
+      "something": "qa"
+    }
+  }
+  
