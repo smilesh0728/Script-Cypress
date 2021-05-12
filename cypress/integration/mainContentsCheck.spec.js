@@ -3,7 +3,7 @@ describe('메인 컨텐츠 체크 테스트',function(){
     beforeEach(() => {
         // 사이트 접속
         // 환경과 서비스명을 이용해서 사이트 접속하도록 구현 필요
-        cy.visit('https://staging.coloso.co.kr')
+        cy.visit('https://qa.coloso.co.kr')
     })
 
 

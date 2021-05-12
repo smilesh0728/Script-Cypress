@@ -8,5 +8,6 @@
       "json": false
     },
     "viewportWidth": 1024,
-    "viewportHeight": 768
+    "viewportHeight": 768,
+    "defaultCommandTimeout": 10000
 }
