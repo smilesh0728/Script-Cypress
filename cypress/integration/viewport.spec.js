@@ -1,4 +1,4 @@
-describe('mobile-tests', () => {
+describe('viewport 테스트', () => {
     context('720 resolution', () => {
 
         beforeEach(() => {

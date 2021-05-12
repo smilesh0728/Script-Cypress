@@ -2,7 +2,7 @@ describe('로그인 테스트',function(){
     it ('비정상 아이디로 로그인', function() {
         // 사이트 접속
         // 환경과 서비스명를 입력받아서 해당 사이트 접속하도록 구현 필요
-        cy.visit('https://qa.fastcampus.co.kr')
+        cy.visit('/')
 
         //로그인 페이지로 이동하는 PATH
         cy.contains('로그인').click()
@@ -26,12 +26,12 @@ describe('로그인 테스트',function(){
         cy.contains('로그인 정보가 일치하지 않습니다').should('be.visible') 
 
     })
-    
+
     it ('정상적인 아이디로 로그인', function() {
         // 사이트 접속
         // 환경과 서비스명을 이용해서 사이트 접속하도록 구현 필요
 
-        cy.visit('https://qa.fastcampus.co.kr')
+        cy.visit('/')
 
         //로그인 페이지로 이동하는 PATH
         cy.contains('로그인').click()
