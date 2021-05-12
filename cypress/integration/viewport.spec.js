@@ -68,7 +68,7 @@ describe('mobile-tests', () => {
             // 사이트 접속
             // 환경과 서비스명을 이용해서 사이트 접속하도록 구현 필요
 
-            cy.visit('https://qa.fastcampus.co.kr')
+            cy.visit('/')
 
             //로그인 페이지로 이동하는 PATH
             cy.get('.nav-opener > svg').click()
@@ -101,7 +101,7 @@ describe('mobile-tests', () => {
     })
 })
 describe('모바일테스트', () => {
-    const sizes = ['iphone-5', 'ipad-2', [384, 854]]
+    const sizes = ['iphone-5', 'ipad-2', 'iphone-x', 'iphone-xr', [384, 854]]
     sizes.forEach((size) => {
         it('${size} 에서 비정상 아이디로 로그인 테스트', () => {
             if (Cypress._.isArray(size)) {
@@ -110,7 +110,7 @@ describe('모바일테스트', () => {
                 cy.viewport(size)
             }
             // 사이트 접속
-            cy.visit('https://qa.fastcampus.co.kr')
+            cy.visit('/')
 
             //로그인 페이지로 이동하는 PATH
             cy.get('.nav-opener > svg').click()
