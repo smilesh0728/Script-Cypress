@@ -13,14 +13,16 @@ describe('마이페이지동작확인', function () {
         // 이메일을 입력한다. 
         // DB에서 가져오는 구조로 구현 필요
         cy.get('input[name=email]')
-            .type('jinhwan.choi@fastcampus.co.kr', { delay: 100 })
+            .type('jinhwan.choi@fastcampus.co.kr', {
+                delay: 100
+            })
             .should('have.value', 'jinhwan.choi@fastcampus.co.kr')
 
         // 비밀번호를 입력한다.
         // DB에서 가져오는 구조로 구현 필요
         cy.get('input[name=password]')
             .type('test1234')
-
+            
         //로그인 버튼을 누른다.
         cy.get('.btn').click()
 
@@ -32,7 +34,7 @@ describe('마이페이지동작확인', function () {
 
         //목록을 가져와서 하나씩 누르는 기능을 만들어야 함.
 
-    
+
 
     })
 })
