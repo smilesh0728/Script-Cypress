@@ -25,17 +25,22 @@ describe('로그아웃 동작 확인', function () {
             
         //로그인 버튼을 누른다.
         cy.get('.btn').click()
-
-        cy.wait(2000)
+    })
+    it('마이페이지 이동 ', function () {
         //홈화면으로 이동하였는지 확인
         //기대결과
-        cy.get('.em').contains('최진환').should('be.visible')
         cy.contains('최진환').click()
-        cy.wait(2000)
-        cy.contains('로그아웃').click()
-        //목록을 가져와서 하나씩 누르는 기능을 만들어야 함.
-
-
+        cy.wait(1000)
 
     })
+
+    it('로그아웃 ', function () {
+        //cy.contains('내 강의 보기').click()
+        cy.get(':nth-child(8) > .vn-sidebar__nav__a').click({force: true})
+        //cy.get('nav').children()
+        //cy.get('ul.vn-sidebar__nav__list').contains('로그아웃').click()
+        //목록을 가져와서 하나씩 누르는 기능을 만들어야 함.
+    })
+
+
 })
